@@ -1,6 +1,9 @@
 {
-  "name": "Test Project",
+  "name": "first_project_a",
   "private": true,
   "description": "This is a test project that I am doing.",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.13.0"
+  }
 }

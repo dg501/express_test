@@ -6,6 +6,10 @@ app.set('views', __dirname + '/app/views');
 app.set('view engine', 'jade');
 app.use('/', require('./app/routes')(router));
 
-app.listen(4000, function() {
-    console.log("Currently running on port 4000!");
+
+console.log('process.env is', process.env);
+var port = process.env.PORT || 4000;
+
+app.listen(port, function() {
+    console.log("Currently running on port " + port + "!");
 });

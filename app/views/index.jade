@@ -1,8 +1,18 @@
 doctype html
+
 html
     head
+        script(type='text/javascript')
+            include ../../assets/js/testfile.js
         title Fun times with numbers
         style(type='text/css')
             include ../../assets/css/style.css
     body
         h1!= message
+        p!= message2
+
+        form(action='/saved')
+
+            p#demo
+
+            button(type="submit") Save the number!

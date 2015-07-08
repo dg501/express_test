@@ -3,7 +3,7 @@ var app = express();
 var router = express.Router();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost/test');
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Failed to connect!'));

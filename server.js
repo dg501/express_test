@@ -8,13 +8,12 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Failed to connect!'));
 
-db.once('open', function(callback) {
+db.once('open', function() {
+
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'jade');
     app.use('/', require('./app/routes')(router));
 
-
-    console.log('process.env is', process.env);
     var port = process.env.PORT || 4000;
 
     app.listen(port, function() {

@@ -7,6 +7,6 @@ module.exports = function(request, response) {
             console.log("Error! " + error);
         }
 
-        response.render('index', { message: result[0].value || '0'});
+        response.render('index', { message: ( result.length > 0 ? result[0].value : Math.random())});
     });
 };
